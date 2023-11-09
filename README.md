@@ -33,3 +33,12 @@ Open the file "basics/breakfastSchema.js". Inspect the schema structure and unde
 # The Library App
 
 We will make a library app to query information about books and create new books.
+
+# References
+
+1. https://mongoosejs.com/docs/index.html
+2. https://mongoosejs.com/docs/guides.html
+3. https://www.mongodb.com/basics 
+4. https://expressjs.com/en/guide/writing-middleware.html
+5. https://expressjs.com/en/guide/using-middleware.html
+6. https://expressjs.com/en/guide/routing.html
