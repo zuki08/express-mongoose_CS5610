@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "async": "*",
+    "cors": "*",
+    "express": "*",
+    "mongoose": "*"
+  }
+}
