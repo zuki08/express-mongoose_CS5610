@@ -29,3 +29,7 @@ Open the file "basics/breakfastSchema.js". Inspect the schema structure and unde
 3. What will happen if we create an instance of the schema with drink set to "Milk"?
 4. Run "basics/mongoose-demo.js" and see what you get? make the changes in 2 and 3 and run again.
 5. Define a function insertMany(entries) in the above script, which takes a list of objects {eggs: N, drink: ‘some drink’} and inserts each entry in entries in the MongoDB collection my_db.
+
+# The Library App
+
+We will make a library app to query information about books and create new books.
