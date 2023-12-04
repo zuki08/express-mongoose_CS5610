@@ -1,8 +1,11 @@
 {
   "dependencies": {
     "async": "*",
-    "cors": "*",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "csurf": "^1.11.0",
     "express": "*",
+    "express-session": "^1.17.3",
     "mongoose": "*"
   }
 }
