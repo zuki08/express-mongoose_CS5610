@@ -11,43 +11,4 @@ exports.show_home = async function (res) {
   let genres = await Genre.countDocuments({});
   let msg = `<div><p> Books: ${books} </p> <p>Copies: ${copies}</p> Copies Available: ${available}</p> Authors: ${authors}</p><p>Genres: ${genres} </p></div>`
   res.send(msg);
-  // Book.countDocuments({}, function(err, results) {
-  //   if (err) {
-  //     console.log('Could not find book : ' + error);
-  //     return
-  //   }
-  //   console.log('Books : ' + results);
-  // });
-  //
-  // BookInstance.countDocuments({}, function(err, results) {
-  //   if (err) {
-  //     console.log('Could not find copies : ' + error);
-  //     return
-  //   }
-  //   console.log('Copies : ' + results);
-  // });
-  //
-  // BookInstance.countDocuments({status: 'Available'}, function(err, results) {
-  //   if (err) {
-  //     console.log('Could not find available copies : ' + error);
-  //     return
-  //   }
-  //   console.log('Copies Available : ' + results);
-  // });
-  //
-  // Author.countDocuments({}, function(err, results) {
-  //   if (err) {
-  //     console.log('Could not find authors : ' + error);
-  //     return
-  //   }
-  //   console.log('Authors : ' + results);
-  // });
-  //
-  // Genre.countDocuments({}, function(err, results) {
-  //   if (err) {
-  //     console.log('Could not find genres : ' + error);
-  //     return
-  //   }
-  //   console.log('Genres : ' + results);
-  // });
 }

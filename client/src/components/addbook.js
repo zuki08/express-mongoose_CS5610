@@ -42,10 +42,10 @@ export default function AddBook() {
     }
     return(
         <div>
-          <input type="text" onChange={handleFamilyNameChange}/>
-          <input type="text" onChange={handleFirstNameChange}/>
-          <input type="text" onChange={handleGenreChange}/>
-          <input type="text" onChange={handleBookTitleChange}/>
+          <input type="text" placeholder= "Family Name" onChange={handleFamilyNameChange}/>
+          <input type="text" placeholder="First Name" onChange={handleFirstNameChange}/>
+          <input type="text" placeholder="Genre" onChange={handleGenreChange}/>
+          <input type="text" placeholder="Book Title" onChange={handleBookTitleChange}/>
           <button onClick={handleClick}> Add New Book </button>
           <p> {msg} </p>
         </div>

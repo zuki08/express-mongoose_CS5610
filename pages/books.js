@@ -3,7 +3,7 @@ let Author = require('../models/author');
 
 function get_books () {
   return Book.find({}, 'title author')
-    .sort({title : 1})
+    .sort({title : 1})  // 1 indictes ascending order
     .populate('author');
 }
 

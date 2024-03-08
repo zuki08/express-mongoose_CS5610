@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
-var cors = require('cors');
-var bodyParser = require('body-parser');
+const cors = require('cors');
+const bodyParser = require('body-parser');
 const port = 8000;
 
 app.listen(port, () => {
@@ -16,10 +16,11 @@ let BookDetails = require('./pages/book_details');
 let CreateBook = require('./pages/create_book');
 
 
-let mongoose = require('mongoose');
-let mongoDB = "mongodb://127.0.0.1:27017/my_library_db";
-mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true});
-let db = mongoose.connection;
+const mongoose = require('mongoose');
+const mongoDB = "mongodb://127.0.0.1:27017/my_library_db";
+// mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(mongoDB);
+const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 db.on('connected', function() {
   console.log('Connected to database');
@@ -31,21 +32,21 @@ app.use(bodyParser.urlencoded({
 app.use(express.json());
 
 
-app.get('/home', (req, res) => {
+app.get('/home', (_, res) => {
   Home.show_home(res);
 })
 
-app.get('/available', (req, res) => {
+app.get('/available', (_, res) => {
   BooksStatus.show_all_books_status(res);
 })
 
-app.get('/books', (req, res) => {
+app.get('/books', (_, res) => {
   Books.show_books()
     .then((data) => res.send(data))
-    .catch((err) => res.send('No books found'));
+    .catch((_) => res.send('No books found'));
 })
 
-app.get('/authors', (req, res) => {
+app.get('/authors', (_, res) => {
   Authors.show_all_authors(res);
 })
 

@@ -43,14 +43,3 @@ export default function LibClient() {
     </div>
   )
 }
-
-//const [authors, setAuthors] = useState([]);
-//
-//  // Empty list as 2nd argument ensures that the effect
-//  // is called only once and not after every render
-//  useEffect(() => {
-//    axios.get('http://localhost:8000/authors')
-//      .then(res => {
-//        setAuthors(res.data);
-//      })
-//  }, []);
