@@ -7,9 +7,10 @@ const cors = require('cors');
 const app = express();
 
 // Set up middleware
+const key = process.argv[2];
 app.use(bodyParser.json());
 app.use(session({
-  secret: 'your-secret-key',    // never hardcode in source code. hard-coded here for demonstration purposes.
+  secret: key,    // never hardcode in source code. hard-coded here for demonstration purposes.
   resave: false,
   saveUninitialized: true
 }));
